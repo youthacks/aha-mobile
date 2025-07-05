@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		34D0E6832E18830C004F45A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D0E67A2E18830C004F45A3 /* Assets.xcassets */; };
+		34D0E6852E18830C004F45A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D0E67D2E18830C004F45A3 /* LaunchScreen.storyboard */; };
+		34D0E6862E18830C004F45A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D0E67F2E18830C004F45A3 /* Main.storyboard */; };
+		34D0E6872E18830C004F45A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D0E6792E18830C004F45A3 /* AppDelegate.swift */; };
+		34D0E6882E18830C004F45A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D0E6802E18830C004F45A3 /* SceneDelegate.swift */; };
+		34D0E6892E18830C004F45A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D0E6812E18830C004F45A3 /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		34D0E65A2E1877D1004F45A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,25 +36,34 @@
 		34D0E6432E1877CF004F45A3 /* aha-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aha-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D0E6592E1877D1004F45A3 /* aha-mobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "aha-mobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D0E6632E1877D1004F45A3 /* aha-mobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "aha-mobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D0E6792E18830C004F45A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		34D0E67A2E18830C004F45A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		34D0E67B2E18830C004F45A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34D0E67C2E18830C004F45A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		34D0E67E2E18830C004F45A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		34D0E6802E18830C004F45A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		34D0E6812E18830C004F45A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		34D0E66B2E1877D1004F45A3 /* Exceptions for "aha-mobile" folder in "aha-mobile" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 34D0E6422E1877CF004F45A3 /* aha-mobile */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		34D0E6452E1877CF004F45A3 /* aha-mobile */ = {
+		34B4129E2E188A04008C13EB /* Models */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				34D0E66B2E1877D1004F45A3 /* Exceptions for "aha-mobile" folder in "aha-mobile" target */,
-			);
-			path = "aha-mobile";
+			path = Models;
+			sourceTree = "<group>";
+		};
+		34B4129F2E188AB8008C13EB /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		34B412A02E188AC0008C13EB /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		34B412A12E188AC8008C13EB /* Network */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		34D0E65C2E1877D1004F45A3 /* aha-mobileTests */ = {
@@ -88,7 +106,7 @@
 		34D0E63A2E1877CF004F45A3 = {
 			isa = PBXGroup;
 			children = (
-				34D0E6452E1877CF004F45A3 /* aha-mobile */,
+				34D0E6822E18830C004F45A3 /* aha-mobile */,
 				34D0E65C2E1877D1004F45A3 /* aha-mobileTests */,
 				34D0E6662E1877D1004F45A3 /* aha-mobileUITests */,
 				34D0E6442E1877CF004F45A3 /* Products */,
@@ -103,6 +121,24 @@
 				34D0E6632E1877D1004F45A3 /* aha-mobileUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		34D0E6822E18830C004F45A3 /* aha-mobile */ = {
+			isa = PBXGroup;
+			children = (
+				34B412A12E188AC8008C13EB /* Network */,
+				34B412A02E188AC0008C13EB /* Views */,
+				34B4129F2E188AB8008C13EB /* ViewModels */,
+				34B4129E2E188A04008C13EB /* Models */,
+				34D0E6792E18830C004F45A3 /* AppDelegate.swift */,
+				34D0E67A2E18830C004F45A3 /* Assets.xcassets */,
+				34D0E67B2E18830C004F45A3 /* Info.plist */,
+				34D0E67D2E18830C004F45A3 /* LaunchScreen.storyboard */,
+				34D0E67F2E18830C004F45A3 /* Main.storyboard */,
+				34D0E6802E18830C004F45A3 /* SceneDelegate.swift */,
+				34D0E6812E18830C004F45A3 /* ViewController.swift */,
+			);
+			path = "aha-mobile";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,7 +157,10 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				34D0E6452E1877CF004F45A3 /* aha-mobile */,
+				34B4129E2E188A04008C13EB /* Models */,
+				34B4129F2E188AB8008C13EB /* ViewModels */,
+				34B412A02E188AC0008C13EB /* Views */,
+				34B412A12E188AC8008C13EB /* Network */,
 			);
 			name = "aha-mobile";
 			packageProductDependencies = (
@@ -225,6 +264,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34D0E6832E18830C004F45A3 /* Assets.xcassets in Resources */,
+				34D0E6852E18830C004F45A3 /* LaunchScreen.storyboard in Resources */,
+				34D0E6862E18830C004F45A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34D0E6872E18830C004F45A3 /* AppDelegate.swift in Sources */,
+				34D0E6882E18830C004F45A3 /* SceneDelegate.swift in Sources */,
+				34D0E6892E18830C004F45A3 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +325,25 @@
 			targetProxy = 34D0E6642E1877D1004F45A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		34D0E67D2E18830C004F45A3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34D0E67C2E18830C004F45A3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		34D0E67F2E18830C004F45A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34D0E67E2E18830C004F45A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		34D0E66D2E1877D1004F45A3 /* Debug */ = {
