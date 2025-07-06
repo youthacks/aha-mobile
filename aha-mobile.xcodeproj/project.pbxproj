@@ -51,16 +51,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		34B4129F2E188AB8008C13EB /* ViewModels */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		34B412A02E188AC0008C13EB /* Views */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Views;
-			sourceTree = "<group>";
-		};
 		34B412A12E188AC8008C13EB /* Network */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Network;
@@ -127,8 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				34B412A12E188AC8008C13EB /* Network */,
-				34B412A02E188AC0008C13EB /* Views */,
-				34B4129F2E188AB8008C13EB /* ViewModels */,
 				34B4129E2E188A04008C13EB /* Models */,
 				34D0E6792E18830C004F45A3 /* AppDelegate.swift */,
 				34D0E67A2E18830C004F45A3 /* Assets.xcassets */,
@@ -158,8 +146,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				34B4129E2E188A04008C13EB /* Models */,
-				34B4129F2E188AB8008C13EB /* ViewModels */,
-				34B412A02E188AC0008C13EB /* Views */,
 				34B412A12E188AC8008C13EB /* Network */,
 			);
 			name = "aha-mobile";
