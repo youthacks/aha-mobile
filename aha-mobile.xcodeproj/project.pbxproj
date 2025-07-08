@@ -46,6 +46,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		3471F3A22E1B56BE00CC2599 /* ViewControllers */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		34B4129E2E188A04008C13EB /* Models */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Models;
@@ -116,6 +121,7 @@
 		34D0E6822E18830C004F45A3 /* aha-mobile */ = {
 			isa = PBXGroup;
 			children = (
+				3471F3A22E1B56BE00CC2599 /* ViewControllers */,
 				34B412A12E188AC8008C13EB /* Network */,
 				34B4129E2E188A04008C13EB /* Models */,
 				34D0E6792E18830C004F45A3 /* AppDelegate.swift */,
@@ -145,6 +151,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				3471F3A22E1B56BE00CC2599 /* ViewControllers */,
 				34B4129E2E188A04008C13EB /* Models */,
 				34B412A12E188AC8008C13EB /* Network */,
 			);

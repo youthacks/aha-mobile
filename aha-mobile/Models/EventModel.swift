@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Event: Identifiable, Decodable {
+    let id: Int
+    let name: String
+    let description: String
+    let date: Date
+    let slug: String
+}
