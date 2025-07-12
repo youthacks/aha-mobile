@@ -13,6 +13,7 @@ class EventProductsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     var products: [Product] = []
     var eventCode: String?
+    var refreshTimer: Timer?
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,36 +21,25 @@ class EventProductsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductTableViewCell else {
+            fatalError("Unable to dequeue ProductTableViewCell")
+        }
+
         let product = products[indexPath.row]
-        cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.text = """
-        \(product.name)
-        Price: $\(product.price)
-        \(product.description)
-        In stock: \(product.quantity)
-        """
+        print(product, cell)
+        cell.nameLabel.text = product.name
+        cell.priceLabel.text = String(product.price)    
+        cell.descriptionLabel.text = product.description
+        if product.quantity == 0 {
+            cell.backgroundColor = .systemRed
+        } else {
+            cell.backgroundColor = .white
+        }
         return cell
     }
     
-    func loadProducts() async {
-        guard let eventCode = eventCode else {
-            print("❌ No event code provided.")
-            return
-        }
-        do {
-            products = try await APIService.fetchProducts(for: eventCode)
-            tableView.reloadData()
-        } catch {
-            print("❌ Failed to fetch products: \(error)")
-        }
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Task {
-            await loadProducts()
-        }
 
         // Do any additional setup after loading the view.
     }

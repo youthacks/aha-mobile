@@ -8,9 +8,9 @@
 import Foundation
 
 struct Event: Identifiable, Decodable {
-    let id: Int
+    var id: String { slug }
     let name: String
     let description: String
-    let date: Date
+    let date: String
     let slug: String
 }

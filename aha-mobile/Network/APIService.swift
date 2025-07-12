@@ -2,6 +2,8 @@ import Foundation
 
 enum APIError: Error {
     case invalidURL
+    case invalidResponse
+    case httpError(code: Int)
     case decodingError
     case networkError(Error)
 }
@@ -14,26 +16,38 @@ class APIService {
             throw APIError.invalidURL
         }
 
-        let (data, response) = try await URLSession.shared.data(from: url)
-        guard let httpResponse = response as? HTTPURLResponse,
-              (200...299).contains(httpResponse.statusCode) else {
-            throw APIError.invalidURL
+        print("🔗 Requesting: \(url)")
+
+        let (data, response): (Data, URLResponse)
+        do {
+            (data, response) = try await URLSession.shared.data(from: url)
+        } catch {
+            throw APIError.networkError(error)
+        }
+
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw APIError.invalidResponse
+        }
+
+        print("📥 Response: \(httpResponse.statusCode)")
+
+        guard (200...299).contains(httpResponse.statusCode) else {
+            throw APIError.httpError(code: httpResponse.statusCode)
         }
 
         do {
             return try JSONDecoder().decode(T.self, from: data)
         } catch {
+            print("❌ Decoding error: \(error)")
             throw APIError.decodingError
         }
     }
 
     static func fetchEvent(for slug: String) async throws -> Event {
-        return try await fetch("/events/\(slug)")
+        try await fetch("/events/\(slug)")
     }
 
     static func fetchProducts(for eventSlug: String) async throws -> [Product] {
-        // You can use this to validate t:?he event exists
-        _ = try await fetchEvent(for: eventSlug)
-        return try await fetch("/\(eventSlug)/products")
+        try await fetch("/events/\(eventSlug)/products")
     }
 }
